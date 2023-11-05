@@ -1,12 +1,12 @@
+import { Outlet } from "react-router-dom"
+import MainLayout from "./Components/Layout/MainLayout"
 
 function App() {
 
   return (
-    <>
-     
-      <h1>Vite + React</h1>
-      
-    </>
+      <MainLayout>
+        <Outlet/>
+      </MainLayout>
   )
 }
 
