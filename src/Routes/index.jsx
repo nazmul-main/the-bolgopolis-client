@@ -10,6 +10,7 @@ import Home from '../pages/Home';
 import SignIn from '../pages/SignIn';
 import SignUp from '../pages/SignUp';
 import PrivateRoute from '../Private/PrivateRoute';
+import RecentBlog from '../Components/RecentBlog/RecentBlog';
 
 const routes = createBrowserRouter([
     {
@@ -19,6 +20,7 @@ const routes = createBrowserRouter([
             {
                 index: true,
                 element: <Home></Home>,
+               
             },
             {
                 path: 'addblog',
@@ -31,6 +33,11 @@ const routes = createBrowserRouter([
             {
                 path: 'featuredblogs',
                 element: <FeaturedBlogs></FeaturedBlogs>
+            },
+            {
+                path: 'recentblog',
+                element: <RecentBlog></RecentBlog>,
+                
             },
             {
                 path: 'wishlist',
