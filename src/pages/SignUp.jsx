@@ -2,11 +2,16 @@
 import { useState } from "react";
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { Link } from "react-router-dom";
+// import toast from "react-hot-toast";
+import SocalLogin from "./SocalLogin";
+import useAuth from "../Hooks/useAuth";
 import toast from "react-hot-toast";
 
-const SignOut = () => {
+const SignUp = () => {
     
+    const {createUser} = useAuth()
     const [showPassword, setShowPassword] = useState(false);
+
 
 
     const handleSubmit = (e) => {
@@ -26,17 +31,36 @@ const SignOut = () => {
             return;
         }
 
-        if (!/[A-Z]/.test(password)) {
-            toast.error("don't have a capital letter");
-            return;
-        }
+        // if (!/[A-Z]/.test(password)) {
+        //     toast.error("don't have a capital letter");
+        //     return;
+        // }
 
-        if (!/[!@#$%^&*()_+{}[\]:;<>,.?~\\-]/.test(password)) {
-            toast.error("don't have a special character");
-            return;
-        }
+        // if (!/[!@#$%^&*()_+{}[\]:;<>,.?~\\-]/.test(password)) {
+        //     toast.error("don't have a special character");
+        //     return;
+        // }
 
-        /* creatting  user */
+        createUser(email, password)
+        .then(res =>console.log(res.user))
+        .catch(err => console.log(err))
+
+      
+        //  /* creatting  user */
+        //  createuser(email, password)
+        //  .then(res => {
+        //      handleUpdateProfile(name, img)
+        //          .then(() => {
+        //              window.location.reload()
+        //              toast.success('user create succesfully')
+        //              navigate(location?.state ? location.state : '/')
+                     
+        //          })
+
+        //  })
+        //  .catch(err => {
+        //      toast.error(err.message)
+        //  })
       
 
 
@@ -111,7 +135,7 @@ const SignOut = () => {
 
                         <p>Aready have an acount <Link className="text-[#03d5b4] font-semibold" to="/signin">Login</Link> </p>
                     </form>
-               
+                    <SocalLogin></SocalLogin>
 
                 </div>
             </div>
@@ -119,4 +143,4 @@ const SignOut = () => {
     );
 };
 
-export default SignOut;
+export default SignUp;

@@ -1,10 +1,47 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
+import SocalLogin from "./SocalLogin";
+import useAuth from "../Hooks/useAuth";
+import toast from "react-hot-toast";
 
 
 const SignIn = () => {
     const [showPassword, setShowPassword] = useState(false);
+
+    const { signIn } = useAuth()
+
+    const handleSignin = (e) => {
+        e.preventDefault();
+
+        /* get feild values */
+        const email = e.target.email.value
+        const password = e.target.password.value
+
+
+       
+        // signIn(email, password)
+        //     .then(res => {
+        //         toast.success('Log in successfully');
+        //         alert('Log in successfully');
+        //         // navigate(location?.state ? location.state : '/')
+                
+        //     })
+        //     .catch(err => {
+        //         // toast.error('eamil or password was wrong'); 
+        //         alert('err.message');
+
+        //     });
+        signIn(email, password)
+        .then(res =>console.log(res.user))
+        .catch(err => console.log(err))
+
+
+        }
+   
+
+
+
 
     return (
         <div>
@@ -23,7 +60,7 @@ const SignIn = () => {
                 <div className="shadow-md border md:w-2/3 col-span-3 mx-auto p-5   md:w-3/5 lg:w-1/3  rounded-md">
                     <h2 className="text-3xl font-bold text-[#2C3659] mb-8 text-center">Sign In</h2>
 
-                    <form className="space-y-7 ">
+                    <form onSubmit={handleSignin} className="space-y-7 ">
                         <div>
                             <input
                                 className="outline-none border border-[#03d5b4] w-full rounded-md py-2 px-2"
@@ -57,6 +94,7 @@ const SignIn = () => {
 
                         <p>Ceate an acount ! <Link className="text-[#03d5b4] font-semibold" to="/signup">Sign Up</Link> </p>
                     </form>
+                    <SocalLogin></SocalLogin>
                 </div>
 
             </div>

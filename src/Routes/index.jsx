@@ -8,7 +8,7 @@ import FeaturedBlogs from '../pages/FeaturedBlogs';
 import Wishlist from '../pages/Wishlist';
 import Home from '../pages/Home';
 import SignIn from '../pages/SignIn';
-import SignOut from '../pages/SignOut';
+import SignUp from '../pages/SignUp';
 
 const routes = createBrowserRouter([
     {
@@ -43,7 +43,7 @@ const routes = createBrowserRouter([
     },
     {
         path:'/signup',
-        element: <SignOut />
+        element: <SignUp/>
     }
 ]);
 
