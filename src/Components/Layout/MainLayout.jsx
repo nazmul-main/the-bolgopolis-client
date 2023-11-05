@@ -1,8 +1,11 @@
 /* eslint-disable react/prop-types */
 
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import useAuth from "../../Hooks/useAuth";
 
 const MainLayout = ({ children }) => {
+    const { user, logout } = useAuth()
+    console.log(user);
 
     return (
         <div className="drawer">
@@ -15,8 +18,10 @@ const MainLayout = ({ children }) => {
                             <label htmlFor="my-drawer-3" aria-label="open sidebar" className="btn btn-square btn-ghost">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-6 h-6 stroke-current"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
                             </label>
+                            
                         </div>
-                        <div className="flex-1 px-2 mx-2 text-xl font-bold">Your Logo</div>
+                        <div className=" flex-1 px-2 mx-2 text-xl font-bold">Your Logo</div>
+                       
                         <div className="flex-none hidden lg:block">
                             <div className="menu menu-horizontal">
                                 {/* Navbar menu content here */}
@@ -35,13 +40,37 @@ const MainLayout = ({ children }) => {
                                 <NavLink
                                     className={({ isActive }) => isActive ? 'btn btn-sm btn-primary' : 'btn btn-sm btn-ghost'} to="/wishlist" activeClassName="active">Wishlist
                                 </NavLink>
-                               
+
 
                             </div>
                         </div>
-                        <NavLink
-                                    className={({ isActive }) => isActive ? 'btn btn-sm btn-primary' : 'btn btn-sm btn-ghost'} to="/signin" activeClassName="active">SiginIn
-                                </NavLink>
+                        {
+                            user?.email ? <div className="">
+                                <div className="dropdown dropdown-end mr-4">
+                                    <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                                        <div className="w-10 rounded-full">
+                                            <img src={user.photoURL ? user.photoURL : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhyhj1gUUYu1c8817GfPwApJbYzW9lJdjSXQ&usqp=CAU"} alt={user.displayName} />
+                                        </div>
+                                    </label>
+                                    <ul tabIndex={0} className=":  dropdown-content mt-3 z-[1] p-2 shadow bg-green-200 rounded-b-full rounded-l-full py-2 px-4">
+                                        <li>
+                                            <h3 className=" font-semibold "> {user.displayName
+                                            }</h3>
+
+                                        </li>
+                                        <li>
+                                            <h3 className="font-semibold  ">{user.email
+                                            }</h3>
+
+                                        </li>
+                                    </ul>
+
+                                </div>
+                                <Link onClick={logout} className=" px-4 py-1 rounded-md bg-[#03d5b4] text-[#2C3659] font-bold ">Sign Out</Link>
+                            </div> : <div className="navbar-end">
+                                <Link to='/signin' className=" px-4 py-1 rounded-md bg-[#03d5b4] text-[#2C3659] font-bold">Sign In</Link>
+                            </div>
+                        }
                     </div>
                 </div>
                 {/* Page content here */}
@@ -66,7 +95,7 @@ const MainLayout = ({ children }) => {
                     <NavLink
                         className={({ isActive }) => isActive ? 'btn btn-sm btn-primary' : 'btn btn-sm btn-ghost'} to="/wishlist" activeClassName="active">Wishlist
                     </NavLink>
-                    
+
                 </ul>
             </div>
         </div>

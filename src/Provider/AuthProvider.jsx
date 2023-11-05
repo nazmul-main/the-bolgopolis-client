@@ -1,55 +1,65 @@
 /* eslint-disable react/prop-types */
-import { createContext, useEffect, useState } from 'react';
-import { GoogleAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
-import { auth } from '../Config/firebase.config';
+import { createContext, useEffect, useState } from "react";
+import { GoogleAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
+import { auth } from "../Config/firebase.config";
 
 export const AuthContext = createContext(null)
 
-const googleProvider = new GoogleAuthProvider();
+const googleprovider = new GoogleAuthProvider();
 
 const AuthProvider = ({ children }) => {
-    const [user, setUser] = useState(null)
 
-    /* Google Sigin In  */
-    const googleSiginIn = () => {
-        return signInWithPopup(auth, googleProvider)
+    const [user, setUser] = useState({});
+    const [loading, setLoading] = useState(true)
+
+
+
+    // google signin
+    const googleLogin = () => {
+        setLoading(true)
+        return signInWithPopup(auth, googleprovider);
     }
 
-    /* SignUp  user*/
+    // sign up
     const createUser = (email, password) => {
+        setLoading(true)
         return createUserWithEmailAndPassword(auth, email, password)
     }
 
-    /* sign in user */
-    const signIn = (email, password) => {
+    // sign IN 
+    const signin = (email, password) => {
+        setLoading(true)
         return signInWithEmailAndPassword(auth, email, password)
     }
 
+    const logout = () => {
+        setLoading(true)
+        return signOut(auth)
+    }
+
+
+    /* Currrent user / using observer */
     useEffect(() => {
         onAuthStateChanged(auth, (user) => {
-            setUser(user)
-        })
-
+            setUser(user);
+            setLoading(false)
+        });
     }, []);
-    console.log(user);
-
-
-
-
+    
 
 
 
 
 
     const authentication = {
-        googleSiginIn,
+        googleLogin,
         createUser,
-        signIn,
+        signin,
+        logout,
+        user,
+        loading
+
     }
-
-
-
-
 
     return (
         <AuthContext.Provider value={authentication}>
@@ -57,5 +67,6 @@ const AuthProvider = ({ children }) => {
         </AuthContext.Provider>
     );
 };
+
 
 export default AuthProvider;

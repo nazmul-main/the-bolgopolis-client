@@ -1,38 +1,40 @@
-import { toast } from "react-hot-toast";
-
-
-// import { Navigate } from 'react-router-dom';
-
+/* eslint-disable no-unused-vars */
 import { useContext } from "react";
+import { useNavigate } from "react-router-dom";
+import {toast} from "react-hot-toast";
 import { AuthContext } from "../Provider/AuthProvider";
 
 
-const SocalLogin = () => {
-    const {googleSiginIn} = useContext(AuthContext)
+const SocialLogin = () => {
 
-    const handleSocialLogin = (media) => {
-        media()
+    const {  googleLogin } = useContext(AuthContext)
+
+    const navigate = useNavigate()
+    
+
+    const handleSocialLogin = (loginFunction) => {
+        loginFunction()
         .then(res => {
-            toast.success('user create succesfully')
-            // // Navigate(location?.state ? location.state : '/')
-            console.log(res);
+            toast.success('Sigin in successfully');
+            navigate(location?.state ? location.state : '/')
+            
         })
         .catch(err => {
-            toast.error(err.message)
-        })
+            toast.error('eamil or password was wrong'); 
+
+        });
     }
 
 
+
     return (
-        <div>
-            <div className='divider'>  Continue With </div>
+        <>
+            <div className='divider'>Countinew With</div>
             <div>
-                <button onClick={() => handleSocialLogin(googleSiginIn)}  className='btn w-full'>
-                    Google
-                </button>
+                <button onClick={() => handleSocialLogin(googleLogin)} type="button" className="w-full bg-red-500 text-white py-2 rounded-lg hover:bg-red-600 focus:ring focus:ring-red-200">Sign in with Google</button>
             </div>
-        </div>
+        </>
     );
 };
 
-export default SocalLogin;
+export default SocialLogin;

@@ -9,6 +9,7 @@ import Wishlist from '../pages/Wishlist';
 import Home from '../pages/Home';
 import SignIn from '../pages/SignIn';
 import SignUp from '../pages/SignUp';
+import PrivateRoute from '../Private/PrivateRoute';
 
 const routes = createBrowserRouter([
     {
@@ -33,7 +34,9 @@ const routes = createBrowserRouter([
             },
             {
                 path: 'wishlist',
-                element: <Wishlist></Wishlist>
+                element: <PrivateRoute>
+                    <Wishlist></Wishlist>
+                </PrivateRoute>
             }
         ]
     },

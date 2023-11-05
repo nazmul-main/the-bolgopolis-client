@@ -7,6 +7,7 @@ function App() {
   return (
       <MainLayout>
         <Outlet/>
+        <h1>hello</h1>
         <Toaster/>
       </MainLayout>
      
