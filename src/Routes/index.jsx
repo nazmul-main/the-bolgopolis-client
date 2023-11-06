@@ -12,11 +12,14 @@ import SignUp from '../pages/SignUp';
 import PrivateRoute from '../Private/PrivateRoute';
 import RecentBlog from '../Components/RecentBlog/RecentBlog';
 import BlogDetails from '../Components/BlogDetails/BlogDetails';
+import Error from '../pages/Error';
+import UpdateCoffe from '../Components/UpdateCoffe/UpdateCoffe';
 
 const routes = createBrowserRouter([
     {
         path: '/',
         element: <App></App>,
+        errorElement: <Error></Error>,
         children: [
             {
                 index: true,
@@ -50,7 +53,17 @@ const routes = createBrowserRouter([
                 path: '/blogdetails/:id',
                 element: <PrivateRoute>
                     <BlogDetails></BlogDetails>
-                </PrivateRoute>
+                </PrivateRoute>,
+                loader: () => fetch('http://localhost:5001/api/v1/blogs')
+                
+            }
+            {
+                path: '/updateblogs',
+                element: <PrivateRoute>
+                   <UpdateCoffe
+                </PrivateRoute>,
+                loader: () => fetch('http://localhost:5001/api/v1/blogs')
+                
             }
         ]
     },
