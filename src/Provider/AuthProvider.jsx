@@ -45,6 +45,8 @@ const AuthProvider = ({ children }) => {
             setLoading(false)
         });
     }, []);
+
+    const alu = 'apu'
     
 
 
@@ -57,7 +59,8 @@ const AuthProvider = ({ children }) => {
         signin,
         logout,
         user,
-        loading
+        loading,
+        alu
 
     }
 

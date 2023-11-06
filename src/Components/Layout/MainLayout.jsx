@@ -18,29 +18,29 @@ const MainLayout = ({ children }) => {
                             <label htmlFor="my-drawer-3" aria-label="open sidebar" className="btn btn-square btn-ghost">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-6 h-6 stroke-current"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
                             </label>
-                            
+
                         </div>
                         <div className=" flex-1 px-2 mx-2 text-xl font-bold">
                             <img className="w-12" src="../../../public/assets/png-clipart-blogger-facebook-edublog-livejournal-facebook-rectangle-india-removebg-preview.png" alt="" />
                         </div>
-                       
+
                         <div className="flex-none hidden lg:block">
                             <div className="menu menu-horizontal">
                                 {/* Navbar menu content here */}
                                 <NavLink
-                                    className={({ isActive }) => isActive ? 'btn btn-sm btn-primary' : 'btn btn-sm btn-ghost'} to="/" activeClassName="active">Home
+                                    className={({ isActive }) => isActive ? 'btn btn-sm bg-[#34362a] text-white' : 'btn btn-sm btn-ghost'} to="/" activeClassName="active">Home
                                 </NavLink>
                                 <NavLink
-                                    className={({ isActive }) => isActive ? 'btn btn-sm btn-primary' : 'btn btn-sm btn-ghost'} to="/addblog" activeClassName="active">ADD BLOG
+                                    className={({ isActive }) => isActive ? 'btn btn-sm bg-[#34362a] text-white' : 'btn btn-sm btn-ghost'} to="/addblog" activeClassName="active">ADD BLOG
                                 </NavLink>
                                 <NavLink
-                                    className={({ isActive }) => isActive ? 'btn btn-sm btn-primary' : 'btn btn-sm btn-ghost'} to="/allblogs" activeClassName="active">ALL BLOGS
+                                    className={({ isActive }) => isActive ? 'btn btn-sm bg-[#34362a] text-white' : 'btn btn-sm btn-ghost'} to="/allblogs" activeClassName="active">ALL BLOGS
                                 </NavLink>
                                 <NavLink
-                                    className={({ isActive }) => isActive ? 'btn btn-sm btn-primary' : 'btn btn-sm btn-ghost'} to="/featuredblogs" activeClassName="active">Featured Blogs
+                                    className={({ isActive }) => isActive ? 'btn btn-sm bg-[#34362a] text-white' : 'btn btn-sm btn-ghost'} to="/featuredblogs" activeClassName="active">Featured Blogs
                                 </NavLink>
                                 <NavLink
-                                    className={({ isActive }) => isActive ? 'btn btn-sm btn-primary' : 'btn btn-sm btn-ghost'} to="/wishlist" activeClassName="active">Wishlist
+                                    className={({ isActive }) => isActive ? 'btn btn-sm bg-[#34362a] text-white' : 'btn btn-sm btn-ghost'} to="/wishlist" activeClassName="active">Wishlist
                                 </NavLink>
 
 
@@ -54,7 +54,7 @@ const MainLayout = ({ children }) => {
                                             <img src={user.photoURL ? user.photoURL : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhyhj1gUUYu1c8817GfPwApJbYzW9lJdjSXQ&usqp=CAU"} alt={user.displayName} />
                                         </div>
                                     </label>
-                                    <ul tabIndex={0} className=":  dropdown-content mt-3 z-[1] p-2 shadow bg-green-200 rounded-b-full rounded-l-full py-2 px-4">
+                                    <ul tabIndex={0} className=":  dropdown-content mt-3 z-[10] p-2 shadow bg-[#6b7047] rounded-md   text-white py-2 px-4">
                                         <li>
                                             <h3 className=" font-semibold "> {user.displayName
                                             }</h3>
@@ -68,9 +68,9 @@ const MainLayout = ({ children }) => {
                                     </ul>
 
                                 </div>
-                                <Link onClick={logout} className=" px-4 py-1 rounded-md bg-[#03d5b4] text-[#2C3659] font-bold ">Sign Out</Link>
+                                <Link onClick={logout} className=" px-4 py-1 rounded-md bg-[#646852] text-[#fff] font-bold ">Sign Out</Link>
                             </div> : <div className="navbar-end">
-                                <Link to='/signin' className=" px-4 py-1 rounded-md bg-[#03d5b4] text-[#2C3659] font-bold">Sign In</Link>
+                                <Link to='/signin' className=" px-4 py-1 rounded-md bg-[#646852] text-[#fff] font-bold">Sign In</Link>
                             </div>
                         }
                     </div>
@@ -80,22 +80,22 @@ const MainLayout = ({ children }) => {
             </div>
             <div className="drawer-side">
                 <label htmlFor="my-drawer-3" aria-label="close sidebar" className="drawer-overlay"></label>
-                <ul className="menu p-4 w-80 min-h-full bg-base-200">
+                <ul className="menu p-4 w-80 min-h-full bg-base-200 text-W">
                     {/* Sidebar content here */}
                     <NavLink
-                        className={({ isActive }) => isActive ? 'btn btn-sm btn-primary' : 'btn btn-sm btn-ghost'} to="/" activeClassName="active">Home
+                        className={({ isActive }) => isActive ? 'btn btn-sm bg-[#34362a] text-white' : 'btn btn-sm btn-ghost'} to="/" activeClassName="active">Home
                     </NavLink>
                     <NavLink
-                        className={({ isActive }) => isActive ? 'btn btn-sm btn-primary' : 'btn btn-sm btn-ghost'} to="/addblog" activeClassName="active">ADD BLOG
+                        className={({ isActive }) => isActive ? 'btn btn-sm bg-[#34362a] text-white' : 'btn btn-sm btn-ghost'} to="/addblog" activeClassName="active">ADD BLOG
                     </NavLink>
                     <NavLink
-                        className={({ isActive }) => isActive ? 'btn btn-sm btn-primary' : 'btn btn-sm btn-ghost'} to="/allblogs" activeClassName="active">ALL BLOGS
+                        className={({ isActive }) => isActive ? 'btn btn-sm bg-[#34362a] text-white' : 'btn btn-sm btn-ghost'} to="/allblogs" activeClassName="active">ALL BLOGS
                     </NavLink>
                     <NavLink
-                        className={({ isActive }) => isActive ? 'btn btn-sm btn-primary' : 'btn btn-sm btn-ghost'} to="/featuredblogs" activeClassName="active">Featured Blogs
+                        className={({ isActive }) => isActive ? 'btn btn-sm bg-[#34362a] text-white' : 'btn btn-sm btn-ghost'} to="/featuredblogs" activeClassName="active">Featured Blogs
                     </NavLink>
                     <NavLink
-                        className={({ isActive }) => isActive ? 'btn btn-sm btn-primary' : 'btn btn-sm btn-ghost'} to="/wishlist" activeClassName="active">Wishlist
+                        className={({ isActive }) => isActive ? 'btn btn-sm bg-[#34362a] text-white' : 'btn btn-sm btn-ghost'} to="/wishlist" activeClassName="active">Wishlist
                     </NavLink>
 
                 </ul>

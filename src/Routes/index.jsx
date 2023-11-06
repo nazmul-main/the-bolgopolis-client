@@ -13,7 +13,7 @@ import PrivateRoute from '../Private/PrivateRoute';
 import RecentBlog from '../Components/RecentBlog/RecentBlog';
 import BlogDetails from '../Components/BlogDetails/BlogDetails';
 import Error from '../pages/Error';
-import UpdateCoffe from '../Components/UpdateCoffe/UpdateCoffe';
+import UpdateBlog from '../Components/UpdateCoffe/UpdateCoffe';
 
 const routes = createBrowserRouter([
     {
@@ -56,13 +56,13 @@ const routes = createBrowserRouter([
                 </PrivateRoute>,
                 loader: () => fetch('http://localhost:5001/api/v1/blogs')
                 
-            }
+            },
             {
-                path: '/updateblogs',
+                path: '/update/:_id',
                 element: <PrivateRoute>
-                   <UpdateCoffe
+                   <UpdateBlog></UpdateBlog>
                 </PrivateRoute>,
-                loader: () => fetch('http://localhost:5001/api/v1/blogs')
+                 loader: ({ params }) => fetch(`http://localhost:5001/api/v1/blogs/${params._id}`)
                 
             }
         ]

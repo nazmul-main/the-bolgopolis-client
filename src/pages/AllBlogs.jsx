@@ -1,38 +1,37 @@
 
 
 const SearchInput = () => {
+
   return (
-    <div className="relative">
-      <div className="flex items-center">
-        <input
-          type="text"
-          placeholder="Search..."
-          className="w-64 py-2 pl-10 pr-14 rounded-full border-2 border-gray-300 focus:outline-none focus:border-blue-500"
-        />
-        <button
-          type="button"
-          className="absolute right-3 top-2"
-          onClick={() => {
-            // Handle the search action here
-            alert('Search button clicked');
-          }}
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6 text-gray-500"
-            viewBox="0 0 20 20"
-            fill="currentColor"
-          >
-            <path
-              fillRule="evenodd"
-              d="M13.293 12.293a7 7 0 10-1.414 1.414l4.31 4.31a1 1 0 101.414-1.414l-4.31-4.31zM12 7a5 5 0 100 10 5 5 0 000-10z"
-              clipRule="evenodd"
+    <div className="max-w-screen-xl mx-auto px-4 my-12">
+      <div>
+        <form className="flex flex-col md:flex-row gap-3">
+          <div className="flex">
+            <input type="text" placeholder="Search for the tool you like"
+              className="w-full md:w-80 px-3 h-10 rounded-l border-2 border-[#555843] focus:outline-none focus:border-[#555843]"
             />
-          </svg>
-        </button>
+            <button type="submit" className="bg-[#555843] text-white rounded-r px-2 md:px-3 py-0 md:py-1">Search</button>
+          </div>
+          <select id="pricingType" name="pricingType"
+            className="w-full h-10 border-2 border-[#555843] focus:outline-none focus:border-[#555843] text-[#555843] rounded px-2 md:px-3 py-0 md:py-1 tracking-wider">
+            <option value="All" selected="">All Category</option>
+            <option value="Cooking" >Cooking</option>
+            <option value="Travel">Travel</option>
+            <option value="Technology">Technology</option>
+            <option value="Fitness">Fitness</option>
+            <option value="Entertainment">Entertainment</option>
+            <option value="Gardening">Gardening</option>
+            <option value="Finance">Finance</option>
+            <option value="Art">Art</option>
+            <option value="Science">Science</option>
+            <option value="Fashion">Fashion</option>
+          </select>
+        </form>
       </div>
+
     </div>
   );
-};
+}
+
 
 export default SearchInput;
