@@ -8,11 +8,17 @@ const BlogDetails = () => {
     // console.log(user);
     const { email, photoURL, displayName } = user;
     console.log(email, photoURL, displayName);
+    const currentUser = user.email;
+
 
     const blogs = useLoaderData()
     const { id } = useParams()
     const blog = blogs.find(data => data._id === id);
     console.log(blog);
+    const owner = blog.email;
+
+    console.log(currentUser, owner);
+    const isOwner = currentUser === owner;
 
 
 
@@ -25,10 +31,14 @@ const BlogDetails = () => {
                     <h1 className="text-3xl md:text-5xl lg:text-6xl">{blog.title}</h1>
                     <p className="text-xl md:text-2xl lg:text-3xl">{blog.short_description}</p>
                     <p className=" ">{blog.long_description}</p>
-                    <button type="submit"
-                        className="btn bg-[#555843]  hover:bg-[#34362a] text-white    l mt-4">
-                        Update
-                    </button>
+                    {isOwner && (
+                        <button
+                            type="submit"
+                            className="btn bg-[#555843] hover:bg-[#34362a] text-white mt-4"
+                        >
+                            Update
+                        </button>
+                    )}
                 </div>
                 <div className="md:col-span-2">
                     <div className="h-88 space-y-3">
@@ -37,7 +47,7 @@ const BlogDetails = () => {
                     </div>
                 </div>
             </div>
-            <div className="grid grid-cols-12 bg-[#D0D4CA] py-12 pr-12 ">
+            <div className="grid grid-cols-12 bg-[#D0D4CA] py-12 pr-12 rounded-md ">
                 <div className="mx-auto">
                     <img className="w-12 h-12 rounded-full " src={photoURL} alt="" />
                 </div>

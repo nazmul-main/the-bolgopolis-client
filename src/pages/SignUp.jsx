@@ -1,4 +1,5 @@
-import { Link } from "react-router-dom";
+/* eslint-disable no-unused-vars */
+import { Link, Navigate, useLocation } from "react-router-dom";
 import toast from "react-hot-toast";
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { useState } from "react";
@@ -8,9 +9,14 @@ import SocialLogin from "./SocalLogin";
 
 const SignUp = () => {
     const [showPassword, setShowPassword] = useState(false);
-    const { createUser } = useAuth()
+    const { createUser, handleUpdateProfile } = useAuth()
+    const location = useLocation()
 
     const handleSubmit = e => {
+
+
+
+
         e.preventDefault()
         const form = e.target;
         const name = form.name.value
@@ -21,26 +27,29 @@ const SignUp = () => {
 
         /* password validation */
         if (password.length < 6) {
-            toast.error('is less than 6 characters');
+            alert('is less than 6 characters');
             return;
         }
 
-        if (!/[A-Z]/.test(password)) {
-            toast.error("don't have a capital letter");
-            return;
-        }
+        // if (!/[A-Z]/.test(password)) {
+        //     alert.error("don't have a capital letter");
+        //     return;
+        // }
 
-        if (!/[!@#$%^&*()_+{}[\]:;<>,.?~\\-]/.test(password)) {
-            toast.error("don't have a special character");
-            return;
-        }
+        // if (!/[!@#$%^&*()_+{}[\]:;<>,.?~\\-]/.test(password)) {
+        //     alert.error("don't have a special character");
+        //     return;
+        // }
 
         /* creatting  user */
         createUser(email, password)
             .then(res => {
-                console.log(res);
-                window.location.reload();
-                toast.success('Sign Up successfully');
+                handleUpdateProfile(name, photo)
+                    .then(() => {
+                        window.location.reload()
+                        toast.success('user create succesfully')
+                        Navigate(location?.this.state ? location.state : '/')
+                    })
 
                 
             })
@@ -93,7 +102,7 @@ const SignUp = () => {
                             <button type="submit" className="w-full bg-indigo-500 text-white py-2 rounded-lg hover:bg-indigo-600 focus:ring focus:ring-indigo-200">Sign Up</button>
                         </div>
                     </form>
-                    <p className="text-center text-gray-600">You already have an account? <Link className="font-bold text-blue-600" to={'/signin'}>SignUp</Link></p>
+                    <p className="text-center text-gray-600">You already have an account? <Link className="font-bold text-blue-600" to={'/signin'}>SignIn</Link></p>
                 <div className="mt-4">
                     <SocialLogin></SocialLogin>
                 </div>

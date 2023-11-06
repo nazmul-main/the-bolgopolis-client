@@ -24,11 +24,13 @@ const routes = createBrowserRouter([
             {
                 index: true,
                 element: <Home></Home>,
-               
+
             },
             {
                 path: 'addblog',
-                element: <AddBlog></AddBlog>
+                element: <PrivateRoute>
+                    <AddBlog></AddBlog>
+                </PrivateRoute>
             },
             {
                 path: 'allblogs',
@@ -41,7 +43,7 @@ const routes = createBrowserRouter([
             {
                 path: 'recentblog',
                 element: <RecentBlog></RecentBlog>,
-                
+
             },
             {
                 path: 'wishlist',
@@ -55,25 +57,25 @@ const routes = createBrowserRouter([
                     <BlogDetails></BlogDetails>
                 </PrivateRoute>,
                 loader: () => fetch('http://localhost:5001/api/v1/blogs')
-                
+
             },
             {
                 path: '/update/:_id',
                 element: <PrivateRoute>
-                   <UpdateBlog></UpdateBlog>
+                    <UpdateBlog></UpdateBlog>
                 </PrivateRoute>,
-                 loader: ({ params }) => fetch(`http://localhost:5001/api/v1/blogs/${params._id}`)
-                
+                loader: ({ params }) => fetch(`http://localhost:5001/api/v1/blogs/${params._id}`)
+
             }
         ]
     },
     {
-        path:'/signin',
+        path: '/signin',
         element: <SignIn></SignIn>
     },
     {
-        path:'/signup',
-        element: <SignUp/>
+        path: '/signup',
+        element: <SignUp />
     }
 ]);
 
