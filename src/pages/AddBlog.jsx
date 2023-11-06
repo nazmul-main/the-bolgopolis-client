@@ -38,8 +38,8 @@ const AddBlog = () => {
     
     };
     return (
-        <div className="max-w-screen-xl mx-auto px-4 py-8 md:12">
-            <form className='px-7 md:px-12 py-4 border-4 border-red-300 bg-red-200' onSubmit={handleAddProduct} >
+        <div className="max-w-screen-xl mx-auto px-4 py-8 md:12 ">
+            <form className='px-4 md:px-12 py-4 bg-[#F5EEC8]' onSubmit={handleAddProduct} >
                 <div>
                     <h2 className="py-4 text-xl md:text-3xl font-bold text-center">Add Blog</h2>
                     <div className="md:grid grid-cols-2 justify-center gap-7 py-3 mt-5 mb-5">
@@ -49,7 +49,7 @@ const AddBlog = () => {
                                 Title
                             </label>
                             <input
-                                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-[#D0D4CA]"
                                 name="title"
                                 type="text"
                                 placeholder="Name"
@@ -58,13 +58,13 @@ const AddBlog = () => {
                         </div>
                         <div>
                             <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="name">
-                                Image URL
+                                Image
                             </label>
                             <input
-                                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-[#D0D4CA]"
                                 name="photo"
                                 type="text"
-                                placeholder="phone"
+                                placeholder="Image URL"
                                 required
                             />
                         </div>
@@ -74,7 +74,7 @@ const AddBlog = () => {
                                 Current time
                             </label>
                             <input
-                                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-[#D0D4CA]"
                                 name="time"
                                 type="text"
                                 placeholder={currentTime}
@@ -87,7 +87,7 @@ const AddBlog = () => {
                                 Category
                             </label>
                             <select
-                                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-[#D0D4CA]"
                                 required
                                 name="category"
                             >
@@ -110,7 +110,7 @@ const AddBlog = () => {
                                     Short description
                                 </label>
                                 <textarea
-                                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-[#D0D4CA]"
                                     name="short_description"
                                     placeholder="Short_description"
                                     required
@@ -121,13 +121,13 @@ const AddBlog = () => {
                                     long description
                                 </label>
                                 <textarea
-                                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-[#D0D4CA]"
                                     name="long_description"
                                     placeholder="Long_description"
                                     required
                                 ></textarea>
                             </span>
-                            <button className="btn bg-gray-700  text-red-500 hover:bg-gray-800  w-full my-4">ADD</button>
+                            <button className="btn bg-[#555843]  hover:bg-[#34362a] text-white    w-full my-4">ADD</button>
                         </div>
 
                     </div>

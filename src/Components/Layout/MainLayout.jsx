@@ -20,7 +20,9 @@ const MainLayout = ({ children }) => {
                             </label>
                             
                         </div>
-                        <div className=" flex-1 px-2 mx-2 text-xl font-bold">Your Logo</div>
+                        <div className=" flex-1 px-2 mx-2 text-xl font-bold">
+                            <img className="w-12" src="../../../public/assets/png-clipart-blogger-facebook-edublog-livejournal-facebook-rectangle-india-removebg-preview.png" alt="" />
+                        </div>
                        
                         <div className="flex-none hidden lg:block">
                             <div className="menu menu-horizontal">

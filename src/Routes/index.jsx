@@ -11,6 +11,7 @@ import SignIn from '../pages/SignIn';
 import SignUp from '../pages/SignUp';
 import PrivateRoute from '../Private/PrivateRoute';
 import RecentBlog from '../Components/RecentBlog/RecentBlog';
+import BlogDetails from '../Components/BlogDetails/BlogDetails';
 
 const routes = createBrowserRouter([
     {
@@ -43,6 +44,12 @@ const routes = createBrowserRouter([
                 path: 'wishlist',
                 element: <PrivateRoute>
                     <Wishlist></Wishlist>
+                </PrivateRoute>
+            },
+            {
+                path: '/blogdetails/:id',
+                element: <PrivateRoute>
+                    <BlogDetails></BlogDetails>
                 </PrivateRoute>
             }
         ]
