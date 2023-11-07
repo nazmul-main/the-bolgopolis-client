@@ -94,14 +94,11 @@ const AddBlog = () => {
                             >
                                 <option value="Select" selected>Select your Catecory</option>
                                 <option value="Cooking" >Cooking</option>
-                                <option value="Travel">Travel</option>
-                                <option value="Technology">Technology</option>
+                                <option value="Travel">Travel</option> 
                                 <option value="Fitness">Fitness</option>
-                                <option value="Entertainment">Entertainment</option>
                                 <option value="Gardening">Gardening</option>
                                 <option value="Finance">Finance</option>
                                 <option value="Art">Art</option>
-                                <option value="Science">Science</option>
                                 <option value="Fashion">Fashion</option>
                             </select>
                         </div>
