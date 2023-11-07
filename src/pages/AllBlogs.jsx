@@ -1,22 +1,30 @@
-import { useEffect, useState } from "react";
+import {useState } from "react";
 import RecentblogCard from "../Components/RecentBlog/RecentblogCard";
+import { useQuery } from "@tanstack/react-query";
 
 const SearchInput = () => {
-  const [allBlogs, setAllBlogs] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("All");
-  const [searchQuery, setSearchQuery] = useState(""); // New state for search query
+  const [searchQuery, setSearchQuery] = useState("");
 
-  useEffect(() => {
-    // Fetch data from the fake JSON API
-    fetch('http://localhost:5001/api/v1/blogs')
-      .then((response) => response.json())
-      .then((data) => {
-        setAllBlogs(data);
-      });
-  }, []);
+
+
+  const blogData = async () => {
+    try {
+      const response = await fetch('http://localhost:5001/api/v1/blogs');
+      const data = await response.json();
+      return data;
+    } catch (error) {
+      throw new Error('Error fetching data: ' + error.message);
+    }
+  };
+  const { data: bolgs, isLoading } = useQuery({ queryKey: ['/api/v1/blogs'], queryFn: blogData })
+  if (isLoading) {
+    return <p>loading...</p>
+  }
+  console.log(bolgs);
 
   const filterBlogs = () => {
-    let filteredBlogs = allBlogs;
+    let filteredBlogs = bolgs;
 
     // Filter by category
     if (selectedCategory !== "All") {
