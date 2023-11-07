@@ -1,11 +1,43 @@
 /* eslint-disable react/prop-types */
 
 import { Link } from "react-router-dom";
+import useAuth from "../../Hooks/useAuth";
 
 
 const RecentblogCard = ({ blog }) => {
+    const { user } = useAuth();
+    console.log(user);
+    // const { email } = user;
+    const userEmail = user?.email;
+    const {_id, title, img, category, long_description, currentTime,short_description, } = blog;
+    // console.log(blog);
+    const handleWishlist = () => {
+        const sent = {title, img, short_description, category,userEmail}
+        console.log(sent);
 
-    const {_id, title, img, category, long_description, currentTime } = blog;
+
+        /* post data  */
+    
+        fetch('http://localhost:5001/api/v1/user/wishlist', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(sent)
+        })
+            
+            .then(res => res.json())
+        .then(data => {
+            console.log(data);
+            alert('Wishlist added successfully', {
+                position: 'top-center',
+            });
+        });
+    }
+
+    
+
+
 
     return (
         <div className="md:w-96   rounded-lg  border-4">
@@ -20,9 +52,9 @@ const RecentblogCard = ({ blog }) => {
                 <Link to={`/blogdetails/${_id}`} className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">
                     Details
                 </Link>
-                <Link className="bg-gray-500 text-white px-4 py-2 rounded-md hover:bg-gray-600">
+                <button onClick={handleWishlist}  className="bg-gray-500 text-white px-4 py-2 rounded-md hover:bg-gray-600">
                     Wishlist
-                </Link>
+                </button>
             </div>
         </div>
     );

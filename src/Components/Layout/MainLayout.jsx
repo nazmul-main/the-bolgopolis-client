@@ -5,7 +5,6 @@ import useAuth from "../../Hooks/useAuth";
 
 const MainLayout = ({ children }) => {
     const { user, logout } = useAuth()
-    console.log(user);
 
     return (
         <div className="drawer">
@@ -68,7 +67,7 @@ const MainLayout = ({ children }) => {
                                     </ul>
 
                                 </div>
-                                <Link onClick={logout} className=" px-4 py-1 rounded-md bg-[#646852] text-[#fff] font-bold ">Sign Out</Link>
+                                <button onClick={logout} className=" px-4 py-1 rounded-md bg-[#646852] text-[#fff] font-bold ">Sign Out</button>
                             </div> : <div className="navbar-end">
                                 <Link to='/signin' className=" px-4 py-1 rounded-md bg-[#646852] text-[#fff] font-bold">Sign In</Link>
                             </div>

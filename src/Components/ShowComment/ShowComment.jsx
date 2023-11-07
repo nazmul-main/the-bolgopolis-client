@@ -17,7 +17,6 @@ const ShowComment = ({ id }) => {
     if(isLoading) {
         return <p>loading...</p>
     }
-    console.log(commnets)
     const filteredComments = commnets.filter(blog => blog.id === id);
 
     return (

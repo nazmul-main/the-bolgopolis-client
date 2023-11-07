@@ -13,7 +13,7 @@ import PrivateRoute from '../Private/PrivateRoute';
 import RecentBlog from '../Components/RecentBlog/RecentBlog';
 import BlogDetails from '../Components/BlogDetails/BlogDetails';
 import Error from '../pages/Error';
-import UpdateBlog from '../Components/UpdateCoffe/UpdateCoffe';
+import UpdateBlog from '../Components/UpdateBlog/UpdateBlog';
 
 const routes = createBrowserRouter([
     {
@@ -57,11 +57,11 @@ const routes = createBrowserRouter([
                 element: <PrivateRoute>
                     <BlogDetails></BlogDetails>
                 </PrivateRoute>,
-                loader: () => fetch('http://localhost:5001/api/v1/blogs')
+                // loader: () => fetch('http://localhost:5001/api/v1/blogs')
 
             },
             {
-                path: '/update/:_id',
+                path: '/updateBlog/:id',
                 element: <PrivateRoute>
                     <UpdateBlog></UpdateBlog>
                 </PrivateRoute>,

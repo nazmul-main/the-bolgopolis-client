@@ -1,26 +1,36 @@
-import { useLoaderData, useParams } from "react-router-dom";
+/* eslint-disable no-unused-vars */
+import { Link, useParams } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
 import ShowComment from "../ShowComment/ShowComment";
+import { useQuery } from "@tanstack/react-query";
 
 
 const BlogDetails = () => {
 
     const { user } = useAuth();
-    // console.log(user);
+    const { id } = useParams()
     const { email, photoURL, displayName } = user;
-    console.log(email, photoURL, displayName);
+    // console.log(email, photoURL, displayName);
     const currentUser = user.email;
 
 
-    const blogs = useLoaderData()
-    const { id } = useParams()
-    console.log(id);
+    const blogData = async () => {
+        try {
+          const response = await fetch('http://localhost:5001/api/v1/blogs');
+          const data = await response.json();
+          return data;
+        } catch (error) {
+          throw new Error('Error fetching data: ' + error.message);
+        }
+      };
+      const { data: bolgs, isLoading } = useQuery({ queryKey: ['/api/v1/blogs'], queryFn: blogData })
+      if (isLoading) {
+        return <p>loading...</p>
+      }
     
-    const blog = blogs.find(data => data._id === id);
-    // console.log(blog);
+    const blog = bolgs.find(data => data._id === id);
     const owner = blog.email;
 
-    // console.log(currentUser, owner);
     const isOwner = currentUser === owner;
     const currentTime = new Date().toLocaleString();
 
@@ -28,7 +38,7 @@ const BlogDetails = () => {
         e.preventDefault();
         const form = e.target;
         const comment = form.comment.value;
-        console.log(photoURL, displayName, comment,currentTime , id);
+        // console.log(photoURL, displayName, comment,currentTime , id);]
 
 
         const commnetData = {
@@ -45,7 +55,6 @@ const BlogDetails = () => {
         })
         .then(res => res.json())
         .then(data => {
-            console.log(data);
             form.reset();
             window.location.reload()
             alert('Product added successfully', {
@@ -74,12 +83,12 @@ const BlogDetails = () => {
                     <p className="text-xl md:text-2xl lg:text-3xl">{blog.short_description}</p>
                     <p className=" ">{blog.long_description}</p>
                     {isOwner && (
-                        <button
+                        <Link to={`/updateBlog/${blog._id}`}
                             type="submit"
                             className="btn bg-[#555843] hover:bg-[#34362a] text-white mt-4"
                         >
                             Update
-                        </button>
+                        </Link>
                     )}
                 </div>
                 <div className="md:col-span-2">
