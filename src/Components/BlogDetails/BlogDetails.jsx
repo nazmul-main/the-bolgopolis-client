@@ -14,6 +14,8 @@ const BlogDetails = () => {
 
     const blogs = useLoaderData()
     const { id } = useParams()
+    console.log(id);
+    
     const blog = blogs.find(data => data._id === id);
     // console.log(blog);
     const owner = blog.email;
@@ -26,11 +28,11 @@ const BlogDetails = () => {
         e.preventDefault();
         const form = e.target;
         const comment = form.comment.value;
-        console.log(photoURL, displayName, comment,currentTime);
+        console.log(photoURL, displayName, comment,currentTime , id);
 
 
         const commnetData = {
-            photoURL, displayName, comment, currentTime
+            photoURL, displayName, comment, currentTime, id
         }
 
 
@@ -114,7 +116,7 @@ const BlogDetails = () => {
                 </div>
 
             </div>
-            <ShowComment></ShowComment>
+            <ShowComment id={id}></ShowComment>
 
         </div>
     );
