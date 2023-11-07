@@ -19,7 +19,7 @@ const SearchInput = () => {
   };
   const { data: bolgs, isLoading } = useQuery({ queryKey: ['/api/v1/blogs'], queryFn: blogData })
   if (isLoading) {
-    return <p>loading...</p>
+    return <p className="text-center">loading...</p>
   }
   console.log(bolgs);
 

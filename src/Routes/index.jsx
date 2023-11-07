@@ -50,7 +50,9 @@ const routes = createBrowserRouter([
                 path: 'wishlist',
                 element: <PrivateRoute>
                     <Wishlist></Wishlist>
-                </PrivateRoute>
+                </PrivateRoute>,
+                loader: () => fetch('http://localhost:5001/api/v1/user/wishlist')
+
             },
             {
                 path: '/blogdetails/:id',

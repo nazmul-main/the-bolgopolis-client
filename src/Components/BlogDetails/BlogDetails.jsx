@@ -98,7 +98,7 @@ const BlogDetails = () => {
                     </div>
                 </div>
             </div>
-            <div className="grid grid-cols-12 bg-[#D0D4CA] py-3 pr-3 md:py-6 md:pr-6 rounded-md ">
+            <div className="grid grid-cols-12 bg-[#eceee9] border-2 border-[#D0D4CA] py-3 pr-3 md:py-6 md:pr-6 rounded-md  ">
                 <div className="mx-auto col-span-2 md:col-span-1">
                     <img className="w-8 h-8 md:w-12 md:h-12 rounded-full object-cover" src={user.photoURL ? user.photoURL : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhyhj1gUUYu1c8817GfPwApJbYzW9lJdjSXQ&usqp=CAU"} alt={user.displayName} />
                    
