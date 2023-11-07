@@ -2,18 +2,6 @@
 import { useQuery } from "@tanstack/react-query";
 
 const ShowComment = ({ id }) => {
-    console.log(id);
-
-    // useEffect(() => {
-    //     fetch('http://localhost:5001/api/v1/user/comment')
-    //         .then(res => res.json())
-    //         .then(data => {
-    //             setBlogData(data);
-    //         })
-    //         .catch(error => {
-    //             console.error("Error fetching data:", error);
-    //         });
-    // }, []);
     const allComments = async () => {
         try {
           const response = await fetch('http://localhost:5001/api/v1/user/comment');
