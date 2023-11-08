@@ -44,7 +44,7 @@
                                     <td className="w-4/12 py-2 text-center">{blog.displayName}</td>
                                     <td className="w-3/12 py-2 text-center">
                                         <img
-                                            src={blog.photoURL}
+                                           src={blog.photoURL ? blog.photoURL : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhyhj1gUUYu1c8817GfPwApJbYzW9lJdjSXQ&usqp=CAU"} 
                                             alt={`${blog.displayName}'s Profile Picture`}
                                             className="w-12 h-12 rounded-full mx-auto"
                                         />
