@@ -27,52 +27,52 @@ const SignUp = () => {
         const password = form.password.value
         console.log(name, email, photo, password);
 
-        /*--------------- password validation -----------*/
+        // /*--------------- password validation -----------*/
 
-        // if (password.length < 6) {
-        //     Swal.fire({
-        //         position: "center",
-        //         icon: "error",
-        //         title: "passwoed is less than 6 characters",
-        //         showConfirmButton: false,
-        //         timer: 1500
-        //     });
-        //     alert('');
-        //     return;
-        // }
+        if (password.length < 6) {
+            Swal.fire({
+                position: "center",
+                icon: "error",
+                title: "passwoed is less than 6 characters",
+                showConfirmButton: false,
+                timer: 1500
+            });
+            alert('');
+            return;
+        }
 
-        // if (!/[A-Z]/.test(password)) {
-        //     Swal.fire({
-        //         position: "center",
-        //         icon: "error",
-        //         title: "don't have a capital letter",
-        //         showConfirmButton: false,
-        //         timer: 1500
-        //     });
-        //     return;
-        // }
+        if (!/[A-Z]/.test(password)) {
+            Swal.fire({
+                position: "center",
+                icon: "error",
+                title: "don't have a capital letter",
+                showConfirmButton: false,
+                timer: 1500
+            });
+            return;
+        }
 
-        // if (!/[!@#$%^&*()_+{}[\]:;<>,.?~\\-]/.test(password)) {
-        //     Swal.fire({
-        //         position: "center",
-        //         icon: "error",
-        //         title: "don't have a special character",
-        //         showConfirmButton: false,
-        //         timer: 1500
-        //     });
-        //     return;
-        // }
+        if (!/[!@#$%^&*()_+{}[\]:;<>,.?~\\-]/.test(password)) {
+            Swal.fire({
+                position: "center",
+                icon: "error",
+                title: "don't have a special character",
+                showConfirmButton: false,
+                timer: 1500
+            });
+            return;
+        }
 
-        // if (!/\d/.test(password)) {
-        //     Swal.fire({
-        //         position: "center",
-        //         icon: "error",
-        //         title: "doesn't have a numeric character",
-        //         showConfirmButton: false,
-        //         timer: 1500
-        //     });
-        //     return;
-        // }
+        if (!/\d/.test(password)) {
+            Swal.fire({
+                position: "center",
+                icon: "error",
+                title: "doesn't have a numeric character",
+                showConfirmButton: false,
+                timer: 1500
+            });
+            return;
+        }
 
 
         /* creating user */
