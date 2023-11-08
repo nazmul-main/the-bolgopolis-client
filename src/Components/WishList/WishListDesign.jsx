@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 
-import { Link,  } from "react-router-dom";
+import { Link, useParams,  } from "react-router-dom";
 import Swal from "sweetalert2";
 
 
@@ -8,6 +8,8 @@ import Swal from "sweetalert2";
 
 const WishListDesign = ({ wish , refetch}) => {
     const { _id,  category, img, short_description, title } = wish;
+    const  {id} = useParams()
+    console.log(id);
 
 
   

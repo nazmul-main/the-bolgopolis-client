@@ -12,7 +12,7 @@ const RecentblogCard = ({ blog }) => {
     const { _id, title, img, category, long_description, currentTime, short_description } = blog;
 
     const handleWishlist = () => {
-        const sent = { title, img, short_description, category, email };
+        const sent = {_id, title, img, short_description, category, email };
         console.log(sent);
 
         fetch("https://the-blogopolis-server.vercel.app/api/v1/user/wishlist", {
