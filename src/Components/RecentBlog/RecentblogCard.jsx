@@ -33,7 +33,7 @@ const RecentblogCard = ({ blog }) => {
             Swal.fire({
                 position: "center",
                 icon: "success",
-                title: "Wishlist added successfully",
+                title: "wish list added successfully",
                 showConfirmButton: false,
                 timer: 1500
               });

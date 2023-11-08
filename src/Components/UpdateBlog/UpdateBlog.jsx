@@ -34,7 +34,7 @@ const handleUpdate = (e) => {
 
   console.log(updatedBlog);
 
-  fetch(`http://localhost:5001/api/v1/blogs/update/${id}`, {
+  fetch(`http://localhost:5001/api/v1/blogs/update/${blogData._id}`, {
     method: 'PUT',
     headers: {
       'Content-Type': 'application/json',

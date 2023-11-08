@@ -38,8 +38,6 @@ const BlogDetails = () => {
         e.preventDefault();
         const form = e.target;
         const comment = form.comment.value;
-        // console.log(photoURL, displayName, comment,currentTime , id);]
-
 
         const commnetData = {
             photoURL, displayName, comment, currentTime, id

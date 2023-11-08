@@ -19,6 +19,7 @@ const ShowComment = ({ id }) => {
     }
     const filteredComments = commnets.filter(blog => blog.id === id);
 
+
     return (
         <div className="w-2/5">
             <div className="space-y-2  ">
@@ -27,7 +28,7 @@ const ShowComment = ({ id }) => {
                         <div className="border-2 py-4 bg-[#853d3d74] rounded-md px-4 " key={blog._id}>
                             <div className="flex gap-2">
                                 <div>
-                                    <h1><img className="w-10 h-10 rounded-full" src={blog.photoURL} alt="" /></h1>
+                                    <h1><img className="w-10 h-10 rounded-full" src={blog.photoURL ? blog.photoURL : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhyhj1gUUYu1c8817GfPwApJbYzW9lJdjSXQ&usqp=CAU"} alt="" /></h1>
                                 </div>
                                 <div className="w-full ">
                                     <h1 className="text-xl font-bold">{blog.displayName}</h1>

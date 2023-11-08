@@ -45,7 +45,7 @@ const SearchInput = () => {
 
   const handleSearchChange = (event) => {
     setSearchQuery(event.target.value);
-  };
+  };  
 
   const renderBlogs = () => {
     const filteredBlogs = filterBlogs();
@@ -60,7 +60,7 @@ const SearchInput = () => {
   };
 
   return (
-    <div className="max-w-screen-xl mx-auto px-4 my-12">
+    <div className="max-w-screen-xl mx-auto px-4 my-12 min-h-screen">
       <div>
         <div>
           <form className="flex flex-col md:flex-row gap-3 w-1/2 mx-auto">

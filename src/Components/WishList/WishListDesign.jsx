@@ -1,16 +1,16 @@
 /* eslint-disable react/prop-types */
 
-
+import { Link,  } from "react-router-dom";
 import Swal from "sweetalert2";
+
 
 
 
 const WishListDesign = ({ wish , refetch}) => {
     const { _id,  category, img, short_description, title } = wish;
-    
 
-    // const email = user?.email;
-    // const {_id, } = blog;
+
+  
 
      /* Deletehabdle */
      const handleDelete = (_id) => {
@@ -52,18 +52,19 @@ const WishListDesign = ({ wish , refetch}) => {
 
 
     return (
-        <div className='md:grid md:grid-cols-3 gap-4'>
+        <div className='md:grid md:grid-cols-3 gap-4 bg-stone-200 px-4 py-4 rounded-3xl'>
             <div className='col-span-1'>
-                <img className="rounded-md object-cover" src={img} alt="" />
+                <img className="bg-stone-400 object-cover border-slate-500 p-2 rounded-2xl" src={img} alt="" />
+                
             </div>
-            <div className='col-span-2'>
-                <p>{title}</p>
-                <h4>{category}</h4>
-                <p>{short_description}</p>
+            <div className='col-span-2 '>
+                <p className="text-4xl font-semibold mb-4">{title}</p>
+                <h4 className="text-black inline text-sm  border-2 border-stone-400 bg-stone-200 px-3 py-1 rounded-2xl font-semibold m">{category}</h4>
+                <p className="my-4">{short_description}</p>
                 <div className="my-4 flex gap-5 px-2 ">
-                {/* <Link to={`/blogdetails/${_id}`} className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">
+                <Link to={`/blogdetails/${_id}`}  className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">
                     Details
-                </Link> */}
+                </Link>
                     <button onClick={() => handleDelete(_id)} className="bg-gray-500 text-white px-4 py-2 rounded-md hover:bg-gray-600">
                         Remove Wishlist
                     </button>
