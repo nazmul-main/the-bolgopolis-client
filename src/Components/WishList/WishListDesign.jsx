@@ -35,7 +35,7 @@ const WishListDesign = ({ wish , refetch}) => {
                         if (data.deletedCount > 0) {
                            refetch()
                             
-                            Swal.fire(
+                             .fire(
                                 'Deleted!',
                                 'your cart has been deleted.',
                                 'success'

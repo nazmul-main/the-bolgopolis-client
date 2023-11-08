@@ -2,6 +2,7 @@
 
 import { Link } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
+import Swal from "sweetalert2";
 
 
 const RecentblogCard = ({ blog }) => {
@@ -29,9 +30,13 @@ const RecentblogCard = ({ blog }) => {
             .then(res => res.json())
         .then(data => {
             console.log(data);
-            alert('Wishlist added successfully', {
-                position: 'top-center',
-            });
+            Swal.fire({
+                position: "center",
+                icon: "success",
+                title: "Wishlist added successfully",
+                showConfirmButton: false,
+                timer: 1500
+              });
         });
     }
 

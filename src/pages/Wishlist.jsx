@@ -17,7 +17,7 @@ const Wishlist = () => {
             throw new Error('Error fetching data: ' + error.message);
         }
     };
-    const { data: wishlist, isLoading, refetch } = useQuery({ queryKey: [`/api/v1/user/wishlist?email=${user?.email}`], queryFn: wishlistItem })
+    const { data: wishlist, isLoading,  } = useQuery({ queryKey: [`/api/v1/user/wishlist?email=${user?.email}`], queryFn: wishlistItem })
     if (isLoading) {
         return <p>loading...</p>
     }
