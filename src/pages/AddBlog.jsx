@@ -1,3 +1,4 @@
+import Swal from "sweetalert2";
 import useAuth from "../Hooks/useAuth";
 
 const AddBlog = () => {
@@ -22,7 +23,7 @@ const AddBlog = () => {
         };
         console.log(myData);
 
-        fetch('http://localhost:5001/api/v1/blogs', {
+        fetch('https://the-blogopolis-server.vercel.app/api/v1/blogs', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -33,8 +34,12 @@ const AddBlog = () => {
         .then(data => {
             console.log(data);
             form.reset();
-            alert('Product added successfully', {
-                position: 'top-center',
+            Swal.fire({
+                position: "center",
+                icon: "success",
+                title: "Added Successfully",
+                showConfirmButton: false,
+                timer: 1500
             });
         });
     };

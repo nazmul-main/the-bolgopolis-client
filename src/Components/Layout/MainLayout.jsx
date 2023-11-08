@@ -20,7 +20,7 @@ const MainLayout = ({ children }) => {
 
                         </div>
                         <div className=" flex-1 px-2 mx-2 text-xl font-bold">
-                            <img className="w-12" src="../../../public/assets/png-clipart-blogger-facebook-edublog-livejournal-facebook-rectangle-india-removebg-preview.png" alt="" />
+                            <img className="w-12" src="https://i.ibb.co/PrQ6dVq/png-clipart-blogger-facebook-edublog-livejournal-facebook-rectangle-india-removebg-preview.png" alt="" />
                         </div>
 
                         <div className="flex-none hidden lg:block">

@@ -15,7 +15,7 @@ const RecentblogCard = ({ blog }) => {
         const sent = { title, img, short_description, category, email };
         console.log(sent);
 
-        fetch("http://localhost:5001/api/v1/user/wishlist", {
+        fetch("https://the-blogopolis-server.vercel.app/api/v1/user/wishlist", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

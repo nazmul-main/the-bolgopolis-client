@@ -26,7 +26,7 @@ const WishListDesign = ({ wish , refetch}) => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5001/api/v1/user/wishlist/${_id}`, {
+                fetch(`https://the-blogopolis-server.vercel.app/api/v1/user/wishlist/${_id}`, {
                     method: 'DELETE',
                 })
                     .then(res => res.json())

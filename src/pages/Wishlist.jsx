@@ -12,7 +12,7 @@ const Wishlist = () => {
     
 
     const { user } = useAuth()
-    const wishlistapi = `http://localhost:5001/api/v1/user/wishlist?email=${user?.email}`
+    const wishlistapi = `https://the-blogopolis-server.vercel.app/api/v1/user/wishlist?email=${user?.email}`
 
     const wishlistItem = async () => {
         try {

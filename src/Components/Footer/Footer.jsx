@@ -20,7 +20,7 @@ const Footer = () => {
         <div className='bg-[#595b3d74] text-white py-12 '>
             <div className=" max-w-screen-xl px-4  mx-auto grid grid-cols-2 md:grid-cols-3 items-center justify-center px4 gap-6 mb-8">
                 <div className="w-full  mx-auto">
-                    <img className='w-24 h-24 rounded-full' src="../../../public/assets/png-clipart-blogger-facebook-edublog-livejournal-facebook-rectangle-india-removebg-preview.png" alt="" />
+                    <img className='w-24 h-24 rounded-full' src="https://i.ibb.co/PrQ6dVq/png-clipart-blogger-facebook-edublog-livejournal-facebook-rectangle-india-removebg-preview.png" alt="" />
                 </div>
                 <div className="w-full  mx-auto">
                     <div className="text-gray-600 flex gap-4">

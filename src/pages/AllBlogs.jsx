@@ -10,7 +10,7 @@ const SearchInput = () => {
 
   const blogData = async () => {
     try {
-      const response = await fetch('http://localhost:5001/api/v1/blogs');
+      const response = await fetch('https://the-blogopolis-server.vercel.app/api/v1/blogs');
       const data = await response.json();
       return data;
     } catch (error) {

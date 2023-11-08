@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const UpdateBlog = () => {
   const { id } = useParams();
@@ -7,7 +8,7 @@ const UpdateBlog = () => {
   const currentTime = new Date().toLocaleString();
 
   useEffect(() => {
-    fetch(`http://localhost:5001/api/v1/update/blogs/${id}`)
+    fetch(`https://the-blogopolis-server.vercel.app/api/v1/update/blogs/${id}`)
       .then((response) => response.json())
       .then((data) => setBlogData(data))
       .catch((error) => console.error(error));
@@ -34,7 +35,7 @@ const handleUpdate = (e) => {
 
   console.log(updatedBlog);
 
-  fetch(`http://localhost:5001/api/v1/blogs/update/${blogData._id}`, {
+  fetch(`https://the-blogopolis-server.vercel.app/api/v1/blogs/update/${blogData._id}`, {
     method: 'PUT',
     headers: {
       'Content-Type': 'application/json',
@@ -45,7 +46,13 @@ const handleUpdate = (e) => {
     .then((data) => {
       console.log(data);
       form.reset();
-      alert('Blog updated successfully');
+      Swal.fire({
+        position: "center",
+        icon: "success",
+        title: "added comment",
+        showConfirmButton: false,
+        timer: 1500
+    });
     });
 };
 

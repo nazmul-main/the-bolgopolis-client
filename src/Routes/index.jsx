@@ -51,7 +51,7 @@ const routes = createBrowserRouter([
                 element: <PrivateRoute>
                     <Wishlist></Wishlist>
                 </PrivateRoute>,
-                loader: () => fetch('http://localhost:5001/api/v1/user/wishlist')
+                loader: () => fetch('https://the-blogopolis-server.vercel.app/api/v1/user/wishlist')
 
             },
             {
@@ -59,7 +59,7 @@ const routes = createBrowserRouter([
                 element: <PrivateRoute>
                     <BlogDetails></BlogDetails>
                 </PrivateRoute>,
-                // loader: () => fetch('http://localhost:5001/api/v1/blogs')
+                // loader: () => fetch('https://the-blogopolis-server.vercel.app/api/v1/blogs')
 
             },
             {
@@ -67,7 +67,7 @@ const routes = createBrowserRouter([
                 element: <PrivateRoute>
                     <UpdateBlog></UpdateBlog>
                 </PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5001/api/v1/blogs/${params._id}`)
+                loader: ({ params }) => fetch(`https://the-blogopolis-server.vercel.app/api/v1/blogs/${params._id}`)
 
             }
         ]
