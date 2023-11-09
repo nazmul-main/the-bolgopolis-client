@@ -108,10 +108,9 @@ const handleUpdate = (e) => {
                 id="category"
                 name="category"
                 className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-[#D0D4CA]"
-                defaultValue={blogData.category}
                 required
               >
-                <option value="Select">Select your Category</option>
+                <option value="Select">{blogData.category}</option>
                 <option value="Cooking">Cooking</option>
                 <option value="Travel">Travel</option>
                 <option value="Fitness">Fitness</option>
