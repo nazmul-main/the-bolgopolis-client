@@ -52,9 +52,7 @@ const Banner = () => {
                         <span className="text-transparent bg-clip-text bg-gradient-to-r  from-[#dce498] to-[#72d7d0]"> health</span>
 .</h1>
                         <p className="text-[8px] md:text-[18px]">Introducing a modern and sleek theme for Ghost. Perfect for <span className="font-bold"> magazine, newsletter, professional and personal blog </span>publishing.</p>
-                        <Link to="/allphones">
-                            <button className="bg-[#555843]  hover:bg-[#34362a] text-white px-4 py-2 mt-4 rounded-full">All Phones</button>
-                        </Link>
+                        
                     </div>
                 </div>
                 <div>
@@ -71,9 +69,7 @@ const Banner = () => {
                         <span className="text-transparent bg-clip-text bg-gradient-to-r  from-[#dce498] to-[#72d7d0]"> health</span>
 .</h1>
                         <p className="text-[8px] md:text-[18px]">Introducing a modern and sleek theme for Ghost. Perfect for <span className="font-bold"> magazine, newsletter, professional and personal blog </span>publishing.</p>
-                        <Link to="/allphones">
-                            <button className="bg-[#555843]  hover:bg-[#34362a] text-white px-4 py-2 mt-4 rounded-full">All Phones</button>
-                        </Link>
+                        
                     </div>
                 </div>
                 <div>
@@ -90,9 +86,7 @@ const Banner = () => {
                         <span className="text-transparent bg-clip-text bg-gradient-to-r  from-[#dce498] to-[#72d7d0]"> health</span>
 .</h1>
                         <p className="text-[8px] md:text-[18px]">Introducing a modern and sleek theme for Ghost. Perfect for <span className="font-bold"> magazine, newsletter, professional and personal blog </span>publishing.</p>
-                        <Link to="/allphones">
-                            <button className="bg-[#555843]  hover:bg-[#34362a] text-white px-4 py-2 mt-4 rounded-full">All Phones</button>
-                        </Link>
+                        
                     </div>
 
                 </div>
@@ -111,9 +105,6 @@ const Banner = () => {
                         <span className="text-transparent bg-clip-text bg-gradient-to-r  from-[#dce498] to-[#72d7d0]"> health</span>
 .</h1>
                         <p className="text-[8px] md:text-[18px]">Introducing a modern and sleek theme for Ghost. Perfect for <span className="font-bold"> magazine, newsletter, professional and personal blog </span>publishing.</p>
-                        <Link to="/allphones">
-                            <button className="bg-[#555843]  hover:bg-[#34362a] text-white px-4 py-2 mt-4 rounded-full">All Phones</button>
-                        </Link>
                     </div>
 
                 </div>
@@ -132,9 +123,7 @@ const Banner = () => {
                         <span className="text-transparent bg-clip-text bg-gradient-to-r  from-[#dce498] to-[#72d7d0]"> health</span>
 .</h1>
                         <p className="text-[8px] md:text-[18px]">Introducing a modern and sleek theme for Ghost. Perfect for <span className="font-bold"> magazine, newsletter, professional and personal blog </span>publishing.</p>
-                        <Link to="/allphones">
-                            <button className="bg-[#555843]  hover:bg-[#34362a] text-white px-4 py-2 mt-4 rounded-full">All Phones</button>
-                        </Link>
+                        
                     </div>
                 </div>
             </Carousel>

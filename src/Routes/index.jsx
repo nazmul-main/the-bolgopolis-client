@@ -54,14 +54,23 @@ const routes = createBrowserRouter([
                 loader: () => fetch('https://the-blogopolis-server.vercel.app/api/v1/user/wishlist')
 
             },
+            /* Blog Details */
             {
                 path: '/blogdetails/:id',
                 element: <PrivateRoute>
                     <BlogDetails></BlogDetails>
                 </PrivateRoute>,
-                // loader: () => fetch('https://the-blogopolis-server.vercel.app/api/v1/blogs')
+                loader: () => fetch('https://the-blogopolis-server.vercel.app/api/v1/blogs')
 
             },
+            /* Wishlist Details */
+            // {
+            //     path: '/wishdetails',
+            //     element:<WishlistDetails></WishlistDetails>,
+                
+
+            // },
+
             {
                 path: '/updateBlog/:id',
                 element: <PrivateRoute>

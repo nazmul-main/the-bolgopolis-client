@@ -38,7 +38,6 @@ const Wishlist = () => {
 
                 {
                     wishlist?.map(wish => <WishListDesign key={wish._id} wish={wish} refetch={refetch}>
-
                     </WishListDesign>)
                 }
 

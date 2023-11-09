@@ -11,7 +11,7 @@ const MainLayout = ({ children }) => {
             <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
             <div className="drawer-content flex flex-col">
                 {/* Navbar */}
-                <div className="navbar bg-base-300 w-full">
+                <div className="navbar  w-full">
                     <div className="w-full navbar  max-w-screen-xl mx-auto px-4">
                         <div className="flex-none lg:hidden">
                             <label htmlFor="my-drawer-3" aria-label="open sidebar" className="btn btn-square btn-ghost">
@@ -19,8 +19,9 @@ const MainLayout = ({ children }) => {
                             </label>
 
                         </div>
-                        <div className=" flex-1 px-2 mx-2 text-xl font-bold">
-                            <img className="w-12" src="https://i.ibb.co/PrQ6dVq/png-clipart-blogger-facebook-edublog-livejournal-facebook-rectangle-india-removebg-preview.png" alt="" />
+                        <div className=" flex-1 px-2 mx-2 md:text-xl font-bold ">
+                            <Link to='/'><img className="md:w-12 w-8" src="https://i.ibb.co/PrQ6dVq/png-clipart-blogger-facebook-edublog-livejournal-facebook-rectangle-india-removebg-preview.png" alt="" /></Link>
+                            <Link to='/'><p> blogo <span className="text-[#34362a]">Polis</span></p></Link>
                         </div>
 
                         <div className="flex-none hidden lg:block">

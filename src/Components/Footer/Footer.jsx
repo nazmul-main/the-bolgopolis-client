@@ -18,16 +18,16 @@ const Footer = () => {
 
     return (
         <div className='bg-[#595b3d74] text-white py-12 '>
-            <div className=" max-w-screen-xl px-4  mx-auto grid grid-cols-2 md:grid-cols-3 items-center justify-center px4 gap-6 mb-8">
+            <div className=" max-w-screen-xl px-4  mx-auto grid grid-cols-2 md:grid-cols-3 items-center justify-center px4 md:gap-6 mb-8">
                 <div className="w-full  mx-auto">
                     <img className='w-24 h-24 rounded-full' src="https://i.ibb.co/PrQ6dVq/png-clipart-blogger-facebook-edublog-livejournal-facebook-rectangle-india-removebg-preview.png" alt="" />
                 </div>
-                <div className="w-full  mx-auto">
+                <div className="w-full ">
                     <div className="text-gray-600 flex gap-4">
                         <Link to={'/addblog'} className="hover:text-gray-900 font-bold"> Add Blog</Link>
                         <Link to={'/allblogs'} className="hover:text-gray-900 font-bold"> All Bocg</Link>
                         <Link to={'/featuredblogs'} className="hover:text-gray-900 font-bold"> Feature Blog</Link>
-                        <Link to={'/wishlist'} className="hover:text-gray-900 font-bold"> Wishlist</Link>
+                        
                     </div>
                 </div>
 

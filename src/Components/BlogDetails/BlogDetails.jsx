@@ -62,7 +62,7 @@ const BlogDetails = () => {
                 Swal.fire({
                     position: "center",
                     icon: "success",
-                    title: "Updated Successfully",
+                    title: "added comment",
                     showConfirmButton: false,
                     timer: 1500
                 });

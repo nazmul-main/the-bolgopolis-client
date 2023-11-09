@@ -1,16 +1,16 @@
 /* eslint-disable react/prop-types */
 
-import { Link, useParams,  } from "react-router-dom";
+import { Link, } from "react-router-dom";
 import Swal from "sweetalert2";
 
 
 
 
 const WishListDesign = ({ wish , refetch}) => {
-    const { _id,  category, img, short_description, title } = wish;
-    const  {id} = useParams()
-    console.log(id);
-
+    const {_id, blogid,  category, img, short_description, title } = wish;
+    // cons_idt  {id} = useParams()
+    // console.log(id);
+ 
 
   
 
@@ -64,7 +64,7 @@ const WishListDesign = ({ wish , refetch}) => {
                 <h4 className="text-black inline text-sm  border-2 border-stone-400 bg-stone-200 px-3 py-1 rounded-2xl font-semibold m">{category}</h4>
                 <p className="my-4">{short_description}</p>
                 <div className="my-4 flex gap-5 px-2 ">
-                <Link to={`/blogdetails/${_id}`}  className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">
+                <Link to={`/blogdetails/${blogid}`}  className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">
                     Details
                 </Link>
                     <button onClick={() => handleDelete(_id)} className="bg-gray-500 text-white px-4 py-2 rounded-md hover:bg-gray-600">
