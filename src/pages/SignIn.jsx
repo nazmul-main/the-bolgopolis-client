@@ -1,6 +1,5 @@
 /* eslint-disable no-unused-vars */
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import toast from "react-hot-toast";
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { useState } from "react";
 import SocialLogin from "./SocalLogin";

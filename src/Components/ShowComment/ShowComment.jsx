@@ -21,7 +21,7 @@ const ShowComment = ({ id }) => {
 
 
     return (
-        <div className="w-2/5">
+        <div className="md:w-2/5 w-full px-4">
             <div className="space-y-2  ">
                 {
                     filteredComments.map(blog => (

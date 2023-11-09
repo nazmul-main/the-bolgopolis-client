@@ -27,7 +27,7 @@ const SocialLogin = () => {
             
         })
         .catch(err => {
-            toast.error('eamil or password was wrong'); 
+            console.log(err); 
 
         });
     }

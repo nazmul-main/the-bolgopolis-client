@@ -1,5 +1,6 @@
-import Swal from "sweetalert2";
 import useAuth from "../Hooks/useAuth";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const AddBlog = () => {
     const { user } = useAuth();
@@ -34,13 +35,7 @@ const AddBlog = () => {
         .then(data => {
             console.log(data);
             form.reset();
-            Swal.fire({
-                position: "center",
-                icon: "success",
-                title: "Added Successfully",
-                showConfirmButton: false,
-                timer: 1500
-            });
+            toast.success('Blog Added Successfully')
         });
     };
     return (
@@ -137,6 +132,7 @@ const AddBlog = () => {
                 </div>
 
             </form>
+            <ToastContainer position="top-center" autoClose={3000} hideProgressBar />
         </div>
     );
 };
