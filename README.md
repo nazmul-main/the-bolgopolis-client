@@ -4,7 +4,7 @@ Blogify is a comprehensive web application that empowers users to create, read, 
 
 ## Live Site
 
-Check out the live version of Blogify at [[www.blogify.com](https://the-blogopolis.web.app/)] and start your blogging journey today!
+Check out the live version of Blogify at [[Visit live site https://the-blogopolis.web.app/)] and start your blogging journey today!
 
 ## Key Features
 
