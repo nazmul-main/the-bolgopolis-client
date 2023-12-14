@@ -14,6 +14,7 @@ import RecentBlog from '../Components/RecentBlog/RecentBlog';
 import BlogDetails from '../Components/BlogDetails/BlogDetails';
 import Error from '../pages/Error';
 import UpdateBlog from '../Components/UpdateBlog/UpdateBlog';
+import Coontact from '../pages/Coontact';
 
 const routes = createBrowserRouter([
     {
@@ -52,6 +53,12 @@ const routes = createBrowserRouter([
                     <Wishlist></Wishlist>
                 </PrivateRoute>,
                 loader: () => fetch('https://the-blogopolis-server.vercel.app/api/v1/user/wishlist')
+
+            },
+            {
+                path: 'contact',
+                element:<Coontact/>
+
 
             },
             /* Blog Details */

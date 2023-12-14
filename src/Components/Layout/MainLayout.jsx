@@ -42,6 +42,9 @@ const MainLayout = ({ children }) => {
                                 <NavLink
                                     className={({ isActive }) => isActive ? 'btn btn-sm bg-[#34362a] text-white' : 'btn btn-sm btn-ghost'} to="/wishlist" activeClassName="active">Wishlist
                                 </NavLink>
+                                <NavLink
+                                    className={({ isActive }) => isActive ? 'btn btn-sm bg-[#34362a] text-white' : 'btn btn-sm btn-ghost'} to="/contact" activeClassName="active">Contact
+                                </NavLink>
 
 
                             </div>
@@ -96,6 +99,9 @@ const MainLayout = ({ children }) => {
                     </NavLink>
                     <NavLink
                         className={({ isActive }) => isActive ? 'btn btn-sm bg-[#34362a] text-white' : 'btn btn-sm btn-ghost'} to="/wishlist" activeClassName="active">Wishlist
+                    </NavLink>
+                    <NavLink
+                        className={({ isActive }) => isActive ? 'btn btn-sm bg-[#34362a] text-white' : 'btn btn-sm btn-ghost'} to="/contact" activeClassName="active">Contact
                     </NavLink>
 
                 </ul>
