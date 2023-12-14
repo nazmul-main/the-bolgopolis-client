@@ -99,7 +99,7 @@ const BlogDetails = () => {
                         <p className="text-xl md:text-2xl lg:text-3xl">{blog.short_description}</p>
                         <p className=" ">{blog.long_description}</p>
                         {isOwner && (
-                            <Link to={`/updateBlog/${blog._id}`}
+                            <Link to={`/updateBlog/${blog?._id}`}
                                 type="submit"
                                 className="btn bg-[#555843] hover:bg-[#34362a] text-white mt-4"
                             >

@@ -11,7 +11,7 @@ const Banner = () => {
         width: '100%',
         height: '100%',
         background: 'linear-gradient(100deg, black, #4D4855)',
-        opacity: 0.8, // Set the opacity to 0.8 if you want a slightly transparent overlay
+        opacity: 0.8, 
     };
     
 
