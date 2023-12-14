@@ -11,9 +11,9 @@ const Banner = () => {
         width: '100%',
         height: '100%',
         background: 'linear-gradient(100deg, black, #4D4855)',
-        opacity: 0.8, 
+        opacity: 0.8,
     };
-    
+
 
 
     return (
@@ -27,18 +27,18 @@ const Banner = () => {
                         alt="Image 1"
                     />
                     <div className="text-center text-white absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 space-y-3">
-                        <h1 className="text-xl lg:text-6xl md:text-4xl font-bold text-white">Hello 👋, we are Porto, exploring  
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#dce498] to-[#72d7d0]"> fashion</span>, 
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r  from-[#dce498] to-[#72d7d0]"> lifestyle</span> and
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r  from-[#dce498] to-[#72d7d0]"> health</span>
-.</h1>
+                        <h1 className="text-xl lg:text-6xl md:text-4xl font-bold text-white">Hello 👋, we are Porto, exploring
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#dce498] to-[#72d7d0]"> fashion</span>,
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r  from-[#dce498] to-[#72d7d0]"> lifestyle</span> and
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r  from-[#dce498] to-[#72d7d0]"> health</span>
+                            .</h1>
                         <p className="text-[8px] md:text-[18px]">Introducing a modern and sleek theme for Ghost. Perfect for <span className="font-bold"> magazine, newsletter, professional and personal blog </span>publishing.</p>
                         <Link to="/allphones">
                             <button className="btn-sm md:btn-md bg-[#555843]  hover:bg-[#34362a] text-white px-4 py-2 mt-4 rounded-full">All Phones</button>
                         </Link>
                     </div>
                 </div>
-                <div className="max-w-screen-xl mx-auto px-4-12">
+                <div className="max-w-screen-xl mx-auto ">
                     <div style={overlayStyle}></div>
                     <img
                         className='md:h-[80vh] h-[40vh] object-cover'
@@ -46,13 +46,13 @@ const Banner = () => {
                         alt="Image 2"
                     />
                     <div className="text-center text-white absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                       <h1 className="text-xl lg:text-6xl md:text-4xl font-bold text-white">Hello 👋, we are Porto, exploring  
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#dce498] to-[#72d7d0]"> fashion</span>, 
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r  from-[#dce498] to-[#72d7d0]"> lifestyle</span> and
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r  from-[#dce498] to-[#72d7d0]"> health</span>
-.</h1>
+                        <h1 className="text-xl lg:text-6xl md:text-4xl font-bold text-white">Hello 👋, we are Porto, exploring
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#dce498] to-[#72d7d0]"> fashion</span>,
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r  from-[#dce498] to-[#72d7d0]"> lifestyle</span> and
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r  from-[#dce498] to-[#72d7d0]"> health</span>
+                            .</h1>
                         <p className="text-[8px] md:text-[18px]">Introducing a modern and sleek theme for Ghost. Perfect for <span className="font-bold"> magazine, newsletter, professional and personal blog </span>publishing.</p>
-                        
+
                     </div>
                 </div>
                 <div>
@@ -63,13 +63,13 @@ const Banner = () => {
                         alt="Image 3"
                     />
                     <div className="text-center text-white absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                       <h1 className="text-xl lg:text-6xl md:text-4xl font-bold text-white">Hello 👋, we are Porto, exploring  
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#dce498] to-[#72d7d0]"> fashion</span>, 
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r  from-[#dce498] to-[#72d7d0]"> lifestyle</span> and
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r  from-[#dce498] to-[#72d7d0]"> health</span>
-.</h1>
+                        <h1 className="text-xl lg:text-6xl md:text-4xl font-bold text-white">Hello 👋, we are Porto, exploring
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#dce498] to-[#72d7d0]"> fashion</span>,
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r  from-[#dce498] to-[#72d7d0]"> lifestyle</span> and
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r  from-[#dce498] to-[#72d7d0]"> health</span>
+                            .</h1>
                         <p className="text-[8px] md:text-[18px]">Introducing a modern and sleek theme for Ghost. Perfect for <span className="font-bold"> magazine, newsletter, professional and personal blog </span>publishing.</p>
-                        
+
                     </div>
                 </div>
                 <div>
@@ -80,13 +80,13 @@ const Banner = () => {
                         alt="Image 4"
                     />
                     <div className="text-center text-white absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                       <h1 className="text-xl lg:text-6xl md:text-4xl font-bold text-white">Hello 👋, we are Porto, exploring  
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#dce498] to-[#72d7d0]"> fashion</span>, 
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r  from-[#dce498] to-[#72d7d0]"> lifestyle</span> and
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r  from-[#dce498] to-[#72d7d0]"> health</span>
-.</h1>
+                        <h1 className="text-xl lg:text-6xl md:text-4xl font-bold text-white">Hello 👋, we are Porto, exploring
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#dce498] to-[#72d7d0]"> fashion</span>,
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r  from-[#dce498] to-[#72d7d0]"> lifestyle</span> and
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r  from-[#dce498] to-[#72d7d0]"> health</span>
+                            .</h1>
                         <p className="text-[8px] md:text-[18px]">Introducing a modern and sleek theme for Ghost. Perfect for <span className="font-bold"> magazine, newsletter, professional and personal blog </span>publishing.</p>
-                        
+
                     </div>
 
                 </div>
@@ -99,11 +99,11 @@ const Banner = () => {
                     />
 
                     <div className="text-center text-white absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                       <h1 className="text-xl lg:text-6xl md:text-4xl font-bold text-white">Hello 👋, we are Porto, exploring  
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#dce498] to-[#72d7d0]"> fashion</span>, 
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r  from-[#dce498] to-[#72d7d0]"> lifestyle</span> and
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r  from-[#dce498] to-[#72d7d0]"> health</span>
-.</h1>
+                        <h1 className="text-xl lg:text-6xl md:text-4xl font-bold text-white">Hello 👋, we are Porto, exploring
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#dce498] to-[#72d7d0]"> fashion</span>,
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r  from-[#dce498] to-[#72d7d0]"> lifestyle</span> and
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r  from-[#dce498] to-[#72d7d0]"> health</span>
+                            .</h1>
                         <p className="text-[8px] md:text-[18px]">Introducing a modern and sleek theme for Ghost. Perfect for <span className="font-bold"> magazine, newsletter, professional and personal blog </span>publishing.</p>
                     </div>
 
@@ -117,13 +117,13 @@ const Banner = () => {
                     />
 
                     <div className="text-center text-white absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                        <h1 className="text-xl lg:text-6xl md:text-4xl font-bold text-white">Hello 👋, we are Porto, exploring  
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#dce498] to-[#72d7d0]"> fashion</span>, 
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r  from-[#dce498] to-[#72d7d0]"> lifestyle</span> and
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r  from-[#dce498] to-[#72d7d0]"> health</span>
-.</h1>
+                        <h1 className="text-xl lg:text-6xl md:text-4xl font-bold text-white">Hello 👋, we are Porto, exploring
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#dce498] to-[#72d7d0]"> fashion</span>,
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r  from-[#dce498] to-[#72d7d0]"> lifestyle</span> and
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r  from-[#dce498] to-[#72d7d0]"> health</span>
+                            .</h1>
                         <p className="text-[8px] md:text-[18px]">Introducing a modern and sleek theme for Ghost. Perfect for <span className="font-bold"> magazine, newsletter, professional and personal blog </span>publishing.</p>
-                        
+
                     </div>
                 </div>
             </Carousel>

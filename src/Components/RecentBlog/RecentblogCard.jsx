@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
 import Swal from "sweetalert2";
 import { motion } from "framer-motion"; // Import Framer Motion
+import LikeButton from "../LikeButton/LikeButton";
 
 const RecentblogCard = ({ blog }) => {
     const { user } = useAuth();
@@ -12,7 +13,7 @@ const RecentblogCard = ({ blog }) => {
     const { _id, title, img, category, long_description, currentTime, short_description } = blog;
 
     const handleWishlist = () => {
-        const sent = {blogid:_id, title, img, category, long_description, currentTime, short_description ,email };
+        const sent = { blogid: _id, title, img, category, long_description, currentTime, short_description, email };
         console.log(sent);
 
         fetch("https://the-blogopolis-server.vercel.app/api/v1/user/wishlist", {
@@ -42,26 +43,27 @@ const RecentblogCard = ({ blog }) => {
             animate={{ opacity: 5 }} // Animated state (visible)
             transition={{ duration: 1 }} // Animation duration
         >
-            <motion.img 
-            animate={
-               
-                {
-                scale: [1, 0, 0, 1, 1],
-                rotate: [0, 3, 40, 40, 0],
-                // borderRadius: ["%", "20%", "50%", "50%", "20%"],
-                
-              }
-            }
-            transition={{ duration: 1.5 }}
-            src={img} alt={title} className="mb-6 w-full h-40 md:h-52 object-cover rounded-t-lg" />
+            <motion.img
+                animate={
+
+                    {
+                        scale: [1, 0, 0, 1, 1],
+                        rotate: [0, 3, 40, 40, 0],
+                        // borderRadius: ["%", "20%", "50%", "50%", "20%"],
+
+                    }
+                }
+                transition={{ duration: 1.5 }}
+                src={img} alt={title} className="mb-6 w-full h-40 md:h-52 object-cover rounded-t-lg" />
             <div className="space-y-3 px-2">
                 <span className="text-black text-sm border-2 border-pink-400 bg-red-100 px-3 py-2 rounded-2xl font-semibold">
                     {category}
                 </span>
                 <h2 className="text-xl font-bold mt-2">{title}</h2>
-                <p className="text-gray-600 text-sm mt-2">{long_description.slice(0, 200)}...</p>
+                <p className="text-gray-600 text-sm mt-2">{long_description.slice(0, 200)}...</p>F
                 <p className="text-gray-500 text-sm mt-2">
-                    <span className="font-bold">Time</span>: {currentTime}
+                    <span className="font-bold mb-2">Time</span>: {currentTime} <br />
+                    <LikeButton />
                 </p>
             </div>
             <div className="my-4 flex justify-between px-2">
@@ -69,7 +71,7 @@ const RecentblogCard = ({ blog }) => {
                     Details
                 </Link>
                 <button
-                    disabled = {!user}
+                    disabled={!user}
                     onClick={handleWishlist}
                     className="bg-gray-500 text-white px-4 py-2 rounded-md hover:bg-gray-600"
                 >

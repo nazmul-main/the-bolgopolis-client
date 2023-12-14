@@ -74,7 +74,7 @@ const SearchInput = () => {
               />
               <button
                 type="submit"
-                className="bg-[#555843] text-white rounded-r px-2 md:px-3 py-0 md:py-1"
+                className="bg-[#435848] text-white rounded-r px-2 md:px-3 py-0 md:py-1"
               >
                 Search
               </button>
