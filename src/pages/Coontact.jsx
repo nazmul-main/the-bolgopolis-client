@@ -59,7 +59,7 @@ const Coontact = () => {
                             <a href="https://www.instagram.com/nazmulhossen01/" className="mb-4">
                                 <FaInstagram className="text-[#555843] text-4xl hover:text-6xl"></FaInstagram>
                             </a>
-                            <a href="#" className="mb-4">
+                            <a href="https://www.linkedin.com/in/nazmul-hossen-main/" className="mb-4">
                                 <FaLinkedin className="text-[#555843] text-4xl hover:text-blu"></FaLinkedin>
                             </a>
                         </div>
